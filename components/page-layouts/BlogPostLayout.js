@@ -1,12 +1,10 @@
 import React from "react";
+import OverviewLayout from "./OverviewLayout";
 
 const BlogPostLayout = frontMatter => {
   return ({ children: content }) => {
     return (
-      <div>
-        <div style={{ color: "red" }}>{frontMatter.title}</div>
-        <div style={{ color: "green" }}>{content}</div>
-      </div>
+      <OverviewLayout pageTitle={frontMatter.title}>{content}</OverviewLayout>
     );
   };
 };

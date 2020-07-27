@@ -10,6 +10,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.28",
     "next": "9.4.4",
     "next-mdx-enhanced": "^3.0.0",
     "react": "16.13.1",
