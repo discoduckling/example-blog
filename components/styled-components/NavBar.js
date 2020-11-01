@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import Link from "next/link";
 
-const NavBarLink = ({ text }) => {
+const NavBarLink = ({ text, to }) => {
   return (
     <div
       css={css`
@@ -12,7 +13,7 @@ const NavBarLink = ({ text }) => {
         color: white;
       `}
     >
-      {text}
+      <Link href={to}>{text}</Link>
     </div>
   );
 };
@@ -28,7 +29,7 @@ const NavBar = () => {
         background-color: DodgerBlue;
       `}
     >
-      <NavBarLink text={"Home"} />
+      <NavBarLink text={"Home"} to={"/"}/>
     </div>
   );
 };

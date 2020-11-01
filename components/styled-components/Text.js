@@ -1,14 +1,17 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import Link from "next/link";
 
-export const PostTitle = ({ title }) => {
+export const PostTitle = ({ title, to }) => {
   return (
     <div
       css={css`
         font-size: 24px;
       `}
     >
-      {title}
+      <Link href={to}>
+        <a>{title}</a>
+      </Link>
     </div>
   );
 };
